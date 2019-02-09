@@ -31,10 +31,9 @@ Git Commands
 | `git branch [branch name]` | Create a new branch |
 | `git branch -d [branch name]` | Delete a branch |
 | `git push [Remote] --delete [branchName]` | Delete a remote branch |
-| `git checkout -b [branch name]` | Create a new branch and switch to it |
-| `git checkout -b [branch name] [Remote]/[branch name]` | Clone a remote branch and switch to it |
+| `git checkout -b [new branch name]` | Create a new branch and switch to it and keep changes same as current HEAD|
+| `git checkout -b [new branch name] [Remote]/[branch name]` | Clone a remote branch and switch to it |
 | `git checkout [branch name]` | Switch to a branch |
-| `git checkout -` | Switch to the branch last checked out |
 | `git fetch [remote]` | Update remote tracking branch to latest commit. |
 | `git merge [remote]/[branch]` | Merge change in remote/branch to current HEAD |
 | `git merge [source branch] [target branch]` | Merge a branch into a target branch |
