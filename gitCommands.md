@@ -63,8 +63,10 @@ Git Commands
 
 ### Uncommiting changes without losing changes
 ==>If you have a commmited a change which you want to uncommit but you want to keep those changes then follow the following steps.
+~~~
 1.Create a new backup branch which will contain all the latest changes and switch to it.
 2.Delete the local branch on which you want to uncommit the changes.
 3.create a new branch with the same name and checkout the ssh(commit) till the point from where you want to keep changes from current HEAD using `git checkout -b [new branch name] ssh`. 
 4.Push this branch forcefully.
+~~~
 
