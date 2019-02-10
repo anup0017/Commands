@@ -33,6 +33,7 @@ Git Commands
 | `git push [Remote] --delete [branchName]` | Delete a remote branch |
 | `git checkout -b [new branch name]` | Create a new branch and switch to it and keep changes same as current HEAD|
 | `git checkout -b [new branch name] [Remote]/[branch name]` | Clone a remote branch and switch to it |
+| `git checkout -b [new branch name] ssh` | Create a new branch with changes from current HEAD's ssh(particlr commit) |
 | `git checkout [branch name]` | Switch to a branch |
 | `git fetch [remote]` | Update remote tracking branch to latest commit. |
 | `git merge [remote]/[branch]` | Merge change in remote/branch to current HEAD |
@@ -46,6 +47,7 @@ Git Commands
 | ------- | ----------- |
 | `git push [remote] [branch name]` | Push a branch to your remote repository |
 | `git push [remote] --delete [branch name]` | Delete a remote branch |
+| `git push -f [remote] [branch name]` | Focefully push to remote. |
 | `git pull [Remote] [branch]` | fetches changes from remote repo and merges branch mentioned to local HEAD|
 | `git remote add [Remote] ssh://git@github.com/[username]/[repository-name].git` | Add a remote repository |
 | `git remote set-url [Remote] ssh://git@github.com/[username]/[repository-name].git` | Set a repository's [Remote] branch to SSH |
@@ -57,4 +59,12 @@ Git Commands
 | `git log` | View changes |
 | `git log --summary` | View changes (detailed) |
 | `git diff [source branch] [target branch}` | Preview changes before merging |
+
+
+### Uncommiting changes without losing changes
+==>If you have a commmited a change which you want to uncommit but you want to keep those changes then follow the following steps.
+1.Create a new backup branch which will contain all the latest changes and switch to it.
+2.Delete the local branch on which you want to uncommit the changes.
+3.create a new branch with the same name and checkout the ssh(commit) till the point from where you want to keep changes from current HEAD using `git checkout -b [new branch name] ssh`. 
+4.Push this branch forcefully.
 
